@@ -155,6 +155,17 @@ Preclinical to Clinical Treatments. Cells, 13(10), 800. https://doi.org/10.3390/
 
 插件按 DSH bundle 规范打包：`package.json` 声明 `dsh.bundle.patch`，`cordis.patch.yml` 插入 `medical-literature` 行。
 
+### 从 npm 安装（推荐）
+
+包已发布到 npm：<https://www.npmjs.com/package/dsh-plugin-medical-literature>
+
+```bash
+cd ~/.dsh/profiles/web
+pnpm add dsh-plugin-medical-literature
+```
+
+### 从本地源码安装（开发用）
+
 ```bash
 # 先把 PLUGIN 指向本仓库（任意位置）
 PLUGIN=/path/to/dsh-medical-literature-plugin
@@ -177,6 +188,16 @@ pnpm add link:$PLUGIN
 profile 默认开启配置热重载：改 `cordis.patch.yml` 或重新 `pnpm add` 可触发重组。**新增或修改工具 schema 时，已运行的 `dsh web` 仍缓存旧定义，需要新开会话或重启服务**；只改 skill 文本则下一次读取即可生效。
 
 ### 安装检索/引用 skill
+
+从 npm 安装时：
+
+```bash
+mkdir -p ~/.dsh/skills
+ln -sfn ~/.dsh/profiles/web/node_modules/dsh-plugin-medical-literature/skills/medical-literature \
+        ~/.dsh/skills/medical-literature
+```
+
+从本地源码安装时：
 
 ```bash
 PLUGIN=/path/to/dsh-medical-literature-plugin
