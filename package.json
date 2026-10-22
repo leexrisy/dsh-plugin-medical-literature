@@ -1,7 +1,6 @@
 {
   "name": "dsh-plugin-medical-literature",
   "version": "0.6.0",
-  "private": true,
   "description": "Medical literature tools for DeepSeek Harness: PubMed, Europe PMC, arXiv, bioRxiv and medRxiv search, citation formatting, and open-access full text.",
   "type": "module",
   "main": "index.js",
@@ -44,5 +43,16 @@
     "test": "node --test test/unit.test.mjs",
     "test:live": "node test/live.mjs",
     "test:battery": "node test/clinical-battery.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leexrisy/dsh-plugin-medical-literature.git"
+  },
+  "homepage": "https://github.com/leexrisy/dsh-plugin-medical-literature#readme",
+  "bugs": {
+    "url": "https://github.com/leexrisy/dsh-plugin-medical-literature/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
