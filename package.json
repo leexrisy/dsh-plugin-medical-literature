@@ -1,0 +1,48 @@
+{
+  "name": "dsh-plugin-medical-literature",
+  "version": "0.6.0",
+  "private": true,
+  "description": "Medical literature tools for DeepSeek Harness: PubMed, Europe PMC, arXiv, bioRxiv and medRxiv search, citation formatting, and open-access full text.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "lib/",
+    "skills/",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "medical",
+    "literature",
+    "pubmed",
+    "europepmc",
+    "arxiv",
+    "biorxiv",
+    "bibtex",
+    "citation"
+  ],
+  "license": "MIT",
+  "author": "dsh-plugin-medical-literature contributors",
+  "scripts": {
+    "test": "node --test test/unit.test.mjs",
+    "test:live": "node test/live.mjs",
+    "test:battery": "node test/clinical-battery.mjs"
+  }
+}

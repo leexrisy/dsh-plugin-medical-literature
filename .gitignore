@@ -1,0 +1,15 @@
+# dependencies
+node_modules/
+
+# full-text dumps and generated bibliographies
+literature/
+*.bib
+*.ris
+*.csv
+
+# local config and logs
+.env
+*.log
+.DS_Store
+coverage/
+tmp/

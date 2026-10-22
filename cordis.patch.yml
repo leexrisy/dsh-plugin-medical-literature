@@ -1,0 +1,6 @@
+# Bundle patch for dsh-plugin-medical-literature.
+# The row id is arbitrary but must be unique in the composed profile; `name`
+# is the package specifier the Loader imports.
+- insert:
+    - id: medical-literature
+      name: dsh-plugin-medical-literature
